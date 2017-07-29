@@ -1,0 +1,2 @@
+# antismash4_db_panx_prokka_docker
+antismash4 with database
