@@ -1,6 +1,8 @@
 # Standalone antiSMASH build
 # VERSION 0.0.5
+
 FROM antismash/standalone-lite:4.0.0
+
 MAINTAINER cheng gong <512543469@qq.com>
 
 ENV ANTISMASH_URL="https://dl.secondarymetabolites.org/releases"
@@ -44,7 +46,7 @@ ENV PATH /opt/conda/bin:$PATH
 #CMD [ "/bin/bash" ]    
 
 #######prokka##########
-RUN conda update -y --all &&\
+RUN conda update --all -y &&\
          conda config --add channels r &&\
          conda config --add channels bioconda &&\
          conda config --set show_channel_urls yes &&\
@@ -52,7 +54,7 @@ RUN conda update -y --all &&\
          
 #CMD ["/bin/bash"]
 #######panx##########
-RUN conda update -y --all &&\
+RUN conda update --all -y &&\
          conda config --add channels r &&\
          conda config --add channels bioconda &&\
          conda config --add channels conda-forge &&\
